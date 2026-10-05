@@ -1,21 +1,21 @@
 import Photo from "./Photo";
-import "./Family.css";
+import "./Our table.css";
 
 const badges = [
-  "Proudly sourced from local farms",
-  "Only natural and hormone free beef",
-  "Bread baked fresh, every single day",
+  "Fresh ideas, familiar comfort",
+  "Thoughtful ingredients every day",
+  "Made for sharing, always",
 ];
 
-export default function Family() {
+export default function Our table() {
   return (
     <section className="family">
       <div className="family__bg">
-        <Photo src="/images/family.jpg" alt="Buns and raw beef on a board" />
+        <Photo src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85" alt="Buns and raw beef on a board" />
       </div>
 
       <div className="family__content">
-        <h2>Family</h2>
+        <h2>Our table</h2>
         <h3>
           Is rich with flavor. It's people that surround us with gratitude,
           authenticity &amp; values. That satisfy the soul.
@@ -29,10 +29,10 @@ export default function Family() {
 
         <div className="family__actions">
           <a href="#story" className="btn btn--green">
-            Our story
+            Meet the brand
           </a>
           <a href="#menu" className="btn btn--ghost">
-            See the menu
+            See what's cooking
           </a>
         </div>
 
