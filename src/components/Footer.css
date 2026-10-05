@@ -1,0 +1,94 @@
+.footer {
+  background: var(--paper);
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px var(--page-x);
+  border-bottom: 1px dashed #c9c1b0;
+}
+
+.footer__nav ul {
+  display: flex;
+  gap: 24px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer__nav ul a:hover {
+  color: var(--orange);
+}
+
+.footer__phone {
+  margin-left: auto;
+  font-family: var(--display);
+  font-size: 14px;
+  color: var(--orange);
+}
+
+.footer__main {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: end;
+  gap: 24px;
+  padding: 48px var(--page-x) 0;
+}
+
+.footer__main h2 {
+  margin-bottom: 24px;
+  font-size: clamp(26px, 3.4vw, 42px);
+  color: var(--green);
+}
+
+.footer__main > div:first-child {
+  padding-bottom: 48px;
+}
+
+.footer__photo {
+  max-width: 340px;
+  aspect-ratio: 1;
+  margin: 0 0 0 auto;
+}
+
+/* the jpg has a white background; multiply lets the paper colour show through */
+.footer__photo .photo {
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.footer__legal {
+  padding: 14px var(--page-x);
+  background: var(--ink);
+  color: #968e7f;
+  font-size: 12px;
+}
+
+@media (max-width: 860px) {
+  .footer__nav {
+    flex-wrap: wrap;
+  }
+
+  .footer__nav ul {
+    order: 3;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .footer__phone {
+    margin-left: 0;
+  }
+
+  .footer__main {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__photo {
+    margin: 0;
+  }
+}

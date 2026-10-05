@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="16" fill="#17a34a" />
+  <!-- stylized bun and chop / letter L with burger accent -->
+  <path d="M16 16 h14 v24 h18 v12 H16 Z" fill="#fffdf8" />
+  <circle cx="44" cy="22" r="5" fill="#ffb81c" />
+</svg>
