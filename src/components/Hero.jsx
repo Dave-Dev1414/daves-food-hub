@@ -4,52 +4,52 @@ import "./Hero.css";
 
 const burgers = [
   {
-    name: "The Double Decker",
+    name: "Smoky Garden Burger",
     price: "12.99",
     was: "15.50",
     blurb:
-      "Two smashed beef patties, aged cheddar, red onion and a little too much house sauce on a toasted sesame bun.",
-    image: "/images/hero-burger.png",
+      "Charred beef, smoked cheddar, crisp lettuce, pickled onions and our bright house sauce on a toasted brioche bun.",
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85",
   },
   {
-    name: "Smoke House",
+    name: "Crispy Chicken Stack",
     price: "11.49",
     was: "13.00",
     blurb:
-      "Hickory-smoked bacon, crispy onion strings and a pepper jack melt. Messy in the best way.",
-    image: "/images/smoke-house.png",
+      "Golden chicken, crunchy slaw, fresh herbs and a creamy chilli dressing layered into a warm toasted bun.",
+    image: "https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=900&q=85",
   },
   {
-    name: "The Classic",
+    name: "Roasted Veggie Melt",
     price: "8.99",
     was: "10.50",
     blurb:
-      "Single patty, pickles, tomato, lettuce, American cheese. Nothing clever, nothing missing.",
-    image: "/images/classic.png",
+      "Roasted peppers, mushrooms, mozzarella, basil and tomato relish pressed until warm and perfectly crisp.",
+    image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=85",
   },
   {
-    name: "Veggie Stack",
+    name: "Market Fresh Bowl",
     price: "10.25",
     was: "12.00",
     blurb:
-      "Black bean and roasted corn patty, avocado, crunchy slaw and chipotle mayo.",
-    image: "/images/veggie-stack.png",
+      "Seasonal greens, avocado, roasted vegetables, grains and a zesty dressing made for bright lunches.",
+    image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85",
   },
   {
-    name: "Chicken Crunch",
+    name: "Creamy Pesto Pasta",
     price: "9.75",
     was: "11.25",
     blurb:
-      "Buttermilk fried thigh, hot honey and a pile of crunchy pickled cabbage.",
-    image: "/images/chicken-crunch.png",
+      "Silky pesto pasta with roasted tomatoes, parmesan and fresh basil for a bowl that feels like home.",
+    image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=900&q=85",
   },
   {
-    name: "Blue Moon",
+    name: "Berry Cloud Sundae",
     price: "12.49",
     was: "14.00",
     blurb:
-      "Blue cheese, caramelised onion and a fig jam that sounds odd until you try it.",
-    image: "/images/blue-moon.png",
+      "Creamy vanilla, fresh berries, crunchy crumble and a drizzle of berry sauce to finish the meal.",
+    image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85",
   },
 ];
 
@@ -84,7 +84,7 @@ export default function Hero({ onNavigate }) {
   return (
     <header className="hero" id="top">
       <div className="hero__left">
-        <span className="hero__tag">New</span>
+        <span className="hero__tag">Today's pick</span>
         <h1 className="hero__title">{item.name}</h1>
 
         <p className="hero__rating">
@@ -99,14 +99,14 @@ export default function Hero({ onNavigate }) {
             }}
             style={{ textDecoration: "underline", cursor: "pointer" }}
           >
-            3 reviews
+            128 reviews
           </a>
         </p>
         <p className="hero__blurb">{item.blurb}</p>
 
         <div className="hero__buy">
           <a href="#order" className="btn">
-            Order now
+            Try it today
           </a>
           <p className="hero__price">
             <s>${item.was}</s>
