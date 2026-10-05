@@ -2,12 +2,12 @@ import Photo from "./Photo";
 import "./Footer.css";
 
 const navItems = [
-  { label: "Locations", href: "#locations", page: "home" },
-  { label: "Menu", href: "#menu", page: "home" },
+  { label: "Find us", href: "#locations", page: "home" },
+  { label: "Back to top", href: "#menu", page: "home" },
   { label: "Reviews", href: "#reviews", page: "reviews" },
   { label: "Gift cards", href: "#gift-cards", page: "home" },
-  { label: "Food truck", href: "#food-truck", page: "home" },
-  { label: "Email club", href: "#email-club", page: "home" },
+  { label: "Catering", href: "#food-truck", page: "home" },
+  { label: "Join us", href: "#email-club", page: "home" },
 ];
 
 export default function Footer({ onNavigate }) {
@@ -31,7 +31,7 @@ export default function Footer({ onNavigate }) {
             }
           }}
         >
-          Menu
+          Back to top
         </a>
         <ul>
           {navItems.map((item) => (
@@ -43,7 +43,7 @@ export default function Footer({ onNavigate }) {
           ))}
         </ul>
         <a href="tel:7184424400" className="footer__phone">
-          +1 718-442-4400
+          +234 808 442 4400
         </a>
         <a href="#order" className="btn btn--green">
           Order now
@@ -53,20 +53,20 @@ export default function Footer({ onNavigate }) {
       <div className="footer__main">
         <div>
           <h2>
-            Our family.<br />Our story.<br />Our burgers.
+            Good food.<br />Bright days.<br />Better company.
           </h2>
           <a href="#story" className="btn btn--lime">
-            Read our story
+            Our story
           </a>
         </div>
 
         <div className="footer__photo">
-          <Photo src="/images/hamburger.jpg" alt="Burger" />
+          <Photo src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85" alt="Burger" />
         </div>
       </div>
 
       <p className="footer__legal">
-        © {new Date().getFullYear()} Lara Chops. All rights reserved.
+        © {new Date().getFullYear()} Bite & Bloom. All rights reserved.
       </p>
     </footer>
   );
