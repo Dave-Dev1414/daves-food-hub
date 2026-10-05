@@ -3,24 +3,24 @@ import "./Ingredients.css";
 
 const items = [
   {
-    name: "Artisan buns",
+    name: "Freshly baked",
     side: "left",
-    points: ["Baked every morning", "Brioche and sesame", "Never frozen"],
+    points: ["Baked in small batches", "Soft, toasted finishes", "Never left overnight"],
   },
   {
-    name: "Fresh produce",
+    name: "Market produce",
     side: "right",
-    points: ["Delivered daily", "Local farms first", "Washed in-house"],
+    points: ["Seasonal ingredients", "Picked for flavour", "Prepared every day"],
   },
   {
-    name: "Ground beef",
+    name: "Slow roasted",
     side: "left",
-    points: ["Chuck and brisket blend", "Hormone free", "Smashed to order"],
+    points: ["Deep, layered flavour", "Cooked with care", "Finished to order"],
   },
   {
-    name: "Ground turkey",
+    name: "Bright sauces",
     side: "right",
-    points: ["Free range", "Lightly seasoned", "Juicy, not dry"],
+    points: ["Made in our kitchen", "Fresh herbs and citrus", "Balanced, never heavy"],
   },
 ];
 
@@ -28,12 +28,12 @@ export default function Ingredients() {
   return (
     <section className="ingredients">
       <h2>
-        Best quality<br />ingredients
+        Good food<br />starts here
       </h2>
 
       <div className="ingredients__stage">
         <div className="ingredients__photo">
-          <Photo src="/images/footer-burger.jpg" alt="Burger ingredients" />
+          <Photo src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=85" alt="Burger ingredients" />
         </div>
 
         {items.map((it, n) => (
@@ -49,10 +49,10 @@ export default function Ingredients() {
       </div>
 
       <p className="ingredients__note">
-        See our ingredient list. Produce availability varies by season.
+        We choose simple ingredients and let them do the talking.
       </p>
       <a href="#menu" className="btn">
-        Read more
+        Discover the menu
       </a>
     </section>
   );
