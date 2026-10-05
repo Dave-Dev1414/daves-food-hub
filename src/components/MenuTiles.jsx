@@ -14,7 +14,7 @@ const bottom = [
 
 function Tile({ title, text, image, color }) {
   return <article className={`tile tile--${color}`}>
-    <div className="tile__text"><span className="tile__kicker">Dave's Food Hub</span><h3>{title}</h3><p>{text}</p><a href="#order" className="btn">Explore menu ↗</a></div>
+    <div className="tile__text"><span className="tile__kicker">Dave's Food Hub</span><h3>{title}</h3><p>{text}</p><a href="#catering" className="btn">Order from here ↗</a></div>
     <div className="tile__img"><Photo src={image} alt={title.replace(/\n/g, " ")} /></div>
   </article>;
 }
