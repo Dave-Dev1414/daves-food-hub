@@ -8,7 +8,7 @@ const initialReviews = [
   { id: 4, name: "Chinedu James", role: "Verified Customer", avatar: "CJ", rating: 5, date: "2 weeks ago", title: "The whole table loved it.", content: "We ordered a mix of small chops and mains for a group. Generous portions, great flavour and everything arrived warm.", order: "Sharing spread", helpful: 9 },
 ];
 
-export default function ReviewsPage() {
+export default function Reviews() {
   const [reviews, setReviews] = useState(initialReviews), [filter, setFilter] = useState("all"), [formOpen, setFormOpen] = useState(false), [submitted, setSubmitted] = useState(false);
   const [name, setName] = useState(""), [rating, setRating] = useState(5), [title, setTitle] = useState(""), [content, setContent] = useState(""), [order, setOrder] = useState("");
 
@@ -36,7 +36,7 @@ export default function ReviewsPage() {
 
     {submitted && <div className="reviews-alert">Thanks, your review has been added.</div>}
 
-    {formOpen && <section className="review-form-box"><h2>Tell us about your order.</h2><p>Good, great or somewhere in between — we want to hear it.</p><form onSubmit={handleSubmit} className="review-form">
+    {formOpen && <section className="review-form-box"><h2>Tell us about your order.</h2><p>Good, great or somewhere in between, we want to hear it.</p><form onSubmit={handleSubmit} className="review-form">
       <div className="review-form__row"><label>Your name<input required value={name} onChange={(e) => setName(e.target.value)} placeholder="e.g. Maya Lin" /></label><label>Rating<select value={rating} onChange={(e) => setRating(e.target.value)}><option value={5}>★★★★★ (5)</option><option value={4}>★★★★☆ (4)</option><option value={3}>★★★☆☆ (3)</option><option value={2}>★★☆☆☆ (2)</option><option value={1}>★☆☆☆☆ (1)</option></select></label></div>
       <div className="review-form__row"><label>Headline<input value={title} onChange={(e) => setTitle(e.target.value)} placeholder="What stood out?" /></label><label>What did you order?<input value={order} onChange={(e) => setOrder(e.target.value)} placeholder="e.g. Jollof + Chicken" /></label></div>
       <label>Your review<textarea required rows={4} value={content} onChange={(e) => setContent(e.target.value)} placeholder="Tell us about the flavour, service and overall experience." /></label>
