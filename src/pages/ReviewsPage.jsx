@@ -4,54 +4,54 @@ import "./ReviewsPage.css";
 const initialReviews = [
   {
     id: 1,
-    name: "Marcus Vance",
-    role: "Local Foodie",
-    avatar: "MV",
+    name: "Tomi Adeyemi",
+    role: "Verified Diner",
+    avatar: "TA",
     rating: 5,
     date: "2 days ago",
-    title: "The Double Decker is unreal!",
+    title: "The smoky burger is seriously good.",
     content:
-      "Easily the best burger in the neighbourhood. The sear on the beef patties is spot-on and the house sauce has that signature tang. Definitely my new Friday night routine.",
-    order: "The Double Decker + Golden Fries",
+      "The flavours were balanced, the bun was soft and the smoky sauce was exactly what I needed. It tasted fresh from the first bite.",
+    order: "Smoky Garden Burger + Crispy Fries",
     helpful: 24,
   },
   {
     id: 2,
-    name: "Sophia Chen",
+    name: "Daniel Okafor",
     role: "Verified Diner",
-    avatar: "SC",
+    avatar: "DO",
     rating: 5,
     date: "5 days ago",
-    title: "Super fast delivery, hot and crispy",
+    title: "Fresh, filling and beautifully packed.",
     content:
-      "Arrived in under 25 minutes! The grilled sandwiches were still piping hot and crunchy, not soggy like other delivery places. 10/10 service.",
-    order: "Grilled Sandwich & House Slaw",
+      "My bowl arrived looking exactly like the pictures. Everything was crisp and fresh, and the dressing pulled the whole meal together.",
+    order: "Market Fresh Bowl",
     helpful: 18,
   },
   {
     id: 3,
-    name: "Jerome Bell",
-    role: "Chef & Critic",
-    avatar: "JB",
+    name: "Maya Bello",
+    role: "Food Lover",
+    avatar: "MB",
     rating: 4,
     date: "1 week ago",
-    title: "Quality ingredients make all the difference",
+    title: "Comfort food with a fresh twist.",
     content:
-      "You can immediately taste that the chuck & brisket blend is freshly ground and never frozen. Fresh buns made in-house. Top tier comfort food.",
-    order: "House Burger & Sweet Desserts",
+      "The pasta was creamy without feeling too heavy, and the roasted tomatoes made every bite brighter. I will definitely order it again.",
+    order: "Creamy Pesto Pasta + Berry Soda",
     helpful: 12,
   },
   {
     id: 4,
-    name: "Amina K.",
+    name: "Chinedu James",
     role: "Verified Customer",
-    avatar: "AK",
+    avatar: "CJ",
     rating: 5,
     date: "2 weeks ago",
-    title: "That ice cream sundae dessert was the star",
+    title: "The dessert finished everything perfectly.",
     content:
-      "Kids loved the mini hot dogs and my partner and I split the huge sweet desserts bowl. Outstanding atmosphere and real family hospitality.",
-    order: "Kids Meal & Sweet Desserts Sundae",
+      "We shared the burger platter and ended with the berry dessert. Great portions, lovely flavours and the whole experience felt relaxed.",
+    order: "Sharing Platter + Berry Cloud Sundae",
     helpful: 9,
   },
 ];
@@ -86,7 +86,7 @@ export default function ReviewsPage() {
         .toUpperCase() || "LC",
       rating: Number(rating),
       date: "Just now",
-      title: title.trim() || "Delicious meal!",
+      title: title.trim() || "A delicious experience!",
       content: content.trim(),
       order: order.trim() || "House Burger",
       helpful: 0,
@@ -118,13 +118,13 @@ export default function ReviewsPage() {
       {/* Hero Header */}
       <header className="reviews-hero">
         <div className="reviews-hero__content">
-          <span className="reviews-hero__tag">What People Say</span>
+          <span className="reviews-hero__tag">From the table</span>
           <h1 className="reviews-hero__title">
-            Real Flavor.<br />Real Reviews.
+            Real food.<br />Real people.
           </h1>
           <p className="reviews-hero__subtitle">
             Every burger smashed, every bun baked, and every hot meal delivered
-            with pride. Here's what our community thinks about Lara Chops.
+            with pride. Here's what our community thinks about Bite & Bloom.
           </p>
         </div>
 
@@ -139,7 +139,7 @@ export default function ReviewsPage() {
             className="btn btn--green reviews-score-card__btn"
             onClick={() => setFormOpen(!formOpen)}
           >
-            {formOpen ? "Close form" : "Leave a review"}
+            {formOpen ? "Close form" : "Share your bite"}
           </button>
         </div>
       </header>
@@ -153,8 +153,8 @@ export default function ReviewsPage() {
 
       {formOpen && (
         <section className="review-form-box">
-          <h2>Share Your Experience</h2>
-          <p>Tell the grill team how your order turned out.</p>
+          <h2>Tell us about it</h2>
+          <p>Good, great or somewhere in between — we want to hear it.</p>
 
           <form onSubmit={handleSubmit} className="review-form">
             <div className="review-form__row">
@@ -211,7 +211,7 @@ export default function ReviewsPage() {
               <textarea
                 required
                 rows={4}
-                placeholder="How was the flavor, delivery speed, and taste? Be honest!"
+                placeholder="Tell us about the flavour, service and overall experience."
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
               />
@@ -219,7 +219,7 @@ export default function ReviewsPage() {
 
             <div className="review-form__actions">
               <button type="submit" className="btn btn--green">
-                Submit Review
+                Post Review
               </button>
               <button
                 type="button"
@@ -257,7 +257,7 @@ export default function ReviewsPage() {
         </div>
 
         <span className="reviews-filter-bar__badge">
-          100% Genuine Lara Chops Feedback
+          100% Genuine Bite & Bloom Feedback
         </span>
       </section>
 
