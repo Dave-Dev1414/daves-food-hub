@@ -6,21 +6,21 @@ export default function Delivery() {
     <section className="delivery" id="order">
       <div className="delivery__col delivery__col--left">
         <h2>
-          Really<br />faaaaaast<br />delivery!
+          Fresh<br />to your<br />door!
         </h2>
         <p>
           Hot out of the kitchen and onto your doorstep in under thirty minutes,
           or the fries are on us.
         </p>
         <a href="#menu" className="btn btn--green">
-          View locations
+          Order a favourite
         </a>
       </div>
 
       <div className="delivery__center">
         <div className="delivery__art delivery__art--scooter">
           <Photo
-            src="/images/delivery_on_a_scooter.png"
+            src="https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=900&q=85"
             fallbackSrc="/images/delivery_on_a_scooter.jpg"
             alt="Delivery on a scooter"
           />
@@ -28,7 +28,7 @@ export default function Delivery() {
         <div className="delivery__heart" aria-hidden="true">♥</div>
         <div className="delivery__art delivery__art--standing">
           <Photo
-            src="/images/standing_delivery.png"
+            src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=85"
             fallbackSrc="/images/standing_delivery.jpg"
             alt="Standing delivery person"
           />
@@ -37,14 +37,14 @@ export default function Delivery() {
 
       <div className="delivery__col delivery__col--right">
         <h2>
-          Don't wait,<br />become one<br />of us now!
+          Bring<br />good food<br />to more people.
         </h2>
         <p>
           We're hiring cooks, riders and friendly faces for every shift. No
           experience needed, just show up hungry to learn.
         </p>
         <a href="#jobs" className="btn btn--lime">
-          Open positions
+          Plan a spread
         </a>
       </div>
     </section>
