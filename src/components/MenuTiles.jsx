@@ -3,20 +3,20 @@ import "./MenuTiles.css";
 
 const top = [
   {
-    title: "Sand-\nwiches",
-    text: "Toasted, stacked and cut on the diagonal. Ham, turkey, roast beef or whatever the chef is feeling.",
+    title: "Loaded\nBites",
+    text: "Big flavours, toasted edges and generous fillings made for hungry afternoons and late-night cravings.",
     image: "/images/sandwich.jpg",
     color: "green",
   },
   {
-    title: "House\nburgers",
-    text: "Our signature range, built around fresh ground beef we shape by hand every morning.",
+    title: "Signature\nMains",
+    text: "Comfort food with a fresh point of view, from smoky burgers to creamy pasta and everything between.",
     image: "/images/house-burger.jpg",
     color: "orange",
   },
   {
-    title: "Fresh\nsalads",
-    text: "Crunchy, bright and properly dressed. Pair one with a burger and call it balance.",
+    title: "Fresh\nBowls",
+    text: "Crisp greens, roasted vegetables, grains and bright dressings for meals that keep things feeling light.",
     image: "/images/salad.jpg",
     color: "lime",
   },
@@ -24,14 +24,14 @@ const top = [
 
 const bottom = [
   {
-    title: "For all\nkids",
-    text: "Mini burgers, tiny hot dogs and a colouring sheet to keep the table quiet.",
+    title: "Little\nBites",
+    text: "Simple favourites for smaller appetites, with plenty of colour, crunch and room for dessert.",
     image: "/images/hotdog.jpg",
     color: "blue",
   },
   {
-    title: "Sweet\ndesserts",
-    text: "Shakes, sundaes and a warm cookie skillet that never lasts long enough.",
+    title: "Sweet\nFinish",
+    text: "Soft, cold, warm and chocolatey treats that deserve their own final course.",
     image: "/images/sweet_deserts.jpg",
     color: "pink",
   },
@@ -50,7 +50,7 @@ function Tile({ title, text, image, color }) {
         <h3>{title}</h3>
         {text && <p>{text}</p>}
         <a href="#menu" className="btn">
-          {text ? "View menu" : "See it all"}
+          {text ? "Explore" : "Explore"}
         </a>
       </div>
       {image && (
