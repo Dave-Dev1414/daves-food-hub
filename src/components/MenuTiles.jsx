@@ -2,83 +2,26 @@ import Photo from "./Photo";
 import "./MenuTiles.css";
 
 const top = [
-  {
-    title: "Loaded\nBites",
-    text: "Big flavours, toasted edges and generous fillings made for hungry afternoons and late-night cravings.",
-    image: "/images/sandwich.jpg",
-    color: "green",
-  },
-  {
-    title: "Signature\nMains",
-    text: "Comfort food with a fresh point of view, from smoky burgers to creamy pasta and everything between.",
-    image: "/images/house-burger.jpg",
-    color: "orange",
-  },
-  {
-    title: "Fresh\nBowls",
-    text: "Crisp greens, roasted vegetables, grains and bright dressings for meals that keep things feeling light.",
-    image: "/images/salad.jpg",
-    color: "lime",
-  },
+  { title: "Everyday\nFavourites", text: "The plates you come back for: comforting, generous and full of the flavours we grew up loving.", image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=700&q=85", color: "sage" },
+  { title: "Street Food\nEnergy", text: "Suya, loaded fries, crispy chicken and other bold bites built for serious cravings.", image: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=85", color: "terracotta" },
+  { title: "Fresh &\nLight", text: "Colourful bowls, salads and bright sides for when you want something fresh without being boring.", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=85", color: "cream" },
 ];
-
 const bottom = [
-  {
-    title: "Little\nBites",
-    text: "Simple favourites for smaller appetites, with plenty of colour, crunch and room for dessert.",
-    image: "/images/hotdog.jpg",
-    color: "blue",
-  },
-  {
-    title: "Sweet\nFinish",
-    text: "Soft, cold, warm and chocolatey treats that deserve their own final course.",
-    image: "/images/sweet_deserts.jpg",
-    color: "pink",
-  },
-  {
-    title: "And\nmuch,\nmuch\nmore...",
-    text: null,
-    image: null,
-    color: "white",
-  },
+  { title: "Small\nChops", text: "Perfect for sharing, snacking or pretending you ordered just one thing.", image: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=85", color: "gold" },
+  { title: "Sweet\nThings", text: "Desserts and cold treats that make the final bite worth waiting for.", image: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=700&q=85", color: "dark" },
+  { title: "Drinks &\nMore", text: "Cold bottles, fresh blends and little extras for the full table.", image: "https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=700&q=85", color: "sage-dark" },
 ];
 
 function Tile({ title, text, image, color }) {
-  return (
-    <article className={`tile tile--${color}`}>
-      <div className="tile__text">
-        <h3>{title}</h3>
-        {text && <p>{text}</p>}
-        <a href="#menu" className="btn">
-          {text ? "Explore" : "Explore"}
-        </a>
-      </div>
-      {image && (
-        <div className="tile__img">
-          <Photo
-            src={image}
-            fallbackSrc={image.replace("sweet_deserts.jpg", "sweet-desserts.jpg")}
-            alt={title.replace("\n", "")}
-          />
-        </div>
-      )}
-    </article>
-  );
+  return <article className={`tile tile--${color}`}>
+    <div className="tile__text"><span className="tile__kicker">Dave's Food Hub</span><h3>{title}</h3><p>{text}</p><a href="#order" className="btn">Explore menu ↗</a></div>
+    <div className="tile__img"><Photo src={image} alt={title.replace(/\n/g, " ")} /></div>
+  </article>;
 }
 
 export default function MenuTiles() {
-  return (
-    <section className="tiles" id="menu">
-      <div className="tiles__row tiles__row--top">
-        {top.map((t) => (
-          <Tile key={t.color} {...t} />
-        ))}
-      </div>
-      <div className="tiles__row tiles__row--bottom">
-        {bottom.map((t) => (
-          <Tile key={t.color} {...t} />
-        ))}
-      </div>
-    </section>
-  );
+  return <section className="tiles" id="menu">
+    <div className="tiles__row tiles__row--top">{top.map((t) => <Tile key={t.title} {...t} />)}</div>
+    <div className="tiles__row tiles__row--bottom">{bottom.map((t) => <Tile key={t.title} {...t} />)}</div>
+  </section>;
 }
