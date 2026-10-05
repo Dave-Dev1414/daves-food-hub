@@ -1,4 +1,4 @@
-.family {
+.family  {
   position:relative;
   min-height:680px;
   display:flex;
@@ -8,52 +8,52 @@
   color:#fff
 }
 
-.family__bg {
+.family__bg  {
   position:absolute;
   inset:0 0 0 42%;
   overflow:hidden
 }
 
-.family__bg::after {
+.family__bg::after  {
   content:"";
   position:absolute;
   inset:0;
   background:linear-gradient(90deg,var(--ink) 0%,rgba(32,25,20,.45) 30%,rgba(32,25,20,.05) 75%)
 }
 
-.family__bg .photo {
+.family__bg .photo  {
   width:100%;
   height:100%;
   object-fit:cover
 }
 
-.family__content {
+.family__content  {
   position:relative;
   z-index:2;
   max-width:650px;
   padding:90px var(--page-x)
 }
 
-.family__content h2 {
+.family__content h2  {
   margin-top:14px;
   font-size:clamp(48px,6vw,82px)
 }
 
-.family__content>p {
+.family__content>p  {
   max-width:47ch;
   margin-top:20px;
   color:#cfc5ba;
   font-size:15px
 }
 
-.family__actions {
+.family__actions  {
   display:flex;
   flex-wrap:wrap;
   gap:10px;
   margin-top:28px
 }
 
-.family__badges {
+.family__badges  {
   display:flex;
   gap:35px;
   margin-top:55px;
@@ -61,7 +61,7 @@
   border-top:1px solid rgba(255,255,255,.16)
 }
 
-.family__badges li {
+.family__badges li  {
   font-size:10px;
   font-weight:700;
   letter-spacing:.1em;
@@ -69,27 +69,23 @@
   color:#cfc5ba
 }
 
-@media(max-width:800px) {
-  .family {
+@media(max-width:800px)  {
+  .family  {
     display:block
   }
-
-  .family__bg {
+  .family__bg  {
     position:relative;
     inset:auto;
     width:100%;
     height:300px
   }
-
-  .family__bg::after {
+  .family__bg::after  {
     background:linear-gradient(0deg,rgba(32,25,20,.35),transparent)
   }
-
-  .family__content {
+  .family__content  {
     padding:65px var(--page-x)
   }
-
-  .family__badges {
+  .family__badges  {
     flex-direction:column;
     gap:12px;
     margin-top:38px
